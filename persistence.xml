@@ -4,7 +4,7 @@
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
 
-    <persistence-unit name="vikas" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="kashinath" transaction-type="RESOURCE_LOCAL">
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
