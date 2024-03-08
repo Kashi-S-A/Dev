@@ -1,0 +1,19 @@
+<hibernate-mapping>
+
+ <class name=" Name of the POJO class" table="Name of the table in database">
+
+  <id name="propertyName" column="columnName" type="propertyType" >
+
+	<generator class="generatorClass"/>
+
+ </id>
+
+  <property name="propertyName1" column="colName1" type="propertyType " />
+  
+  <property name="propertyName2" column="colName2" type="propertyType " />
+   …… 
+   <property name="propertyNameN" column="colNameN" type="propertyType " />
+
+
+ </class>
+</hibernate-mapping>
