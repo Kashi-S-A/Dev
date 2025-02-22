@@ -2,3 +2,30 @@
 	<groupId>redis.clients</groupId>
 	<artifactId>jedis</artifactId>
 </dependency>	
+
+
+<plugin>
+	<groupId>org.jacoco</groupId>
+	<artifactId>jacoco-maven-plugin</artifactId>
+	<version>0.8.11</version>
+	<configuration>
+		<excludes>
+			<exclude>com/ks/model/**</exclude><!--To exlude the classes from code coverage i,.e jacoc-->
+			<exclude>com/kashi/Application**</exclude>
+		</excludes>
+	</configuration>
+	<executions>
+		<execution>
+			<goals>
+				<goal>prepare-agent</goal>
+			</goals>
+		</execution>
+		<execution>
+			<id>report</id>
+			<phase>test</phase>
+			<goals>
+				<goal>report</goal>
+			</goals>
+		</execution>
+	</executions>
+</plugin>
