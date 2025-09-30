@@ -1,0 +1,10 @@
+cloud.aws.credentials.accessKey={accesskeyIAM}
+cloud.aws.credentials.secretKey={secretkeyIAM}
+cloud.aws.region.static={region}
+cloud.aws.s3.bucket={bucketname}
+spring.servlet.multipart.enabled=true
+
+spring.servlet.multipart.max-request-size=10MB
+spring.servlet.multipart.max-file-size=10MB
+
+ServicePointManager.DefaultConnectionLimit = 25
