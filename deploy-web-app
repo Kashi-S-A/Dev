@@ -1,0 +1,61 @@
+Deploy web-app
+--------------
+create a ubuntu instance and connect it to mobaxterm
+  
+Note : add yourproject.war to ubunut server using mobaxterm
+        dbusername=root 
+        dbpassword=root
+sudo apt update
+sudo apt install openjdk-17-jdk -y
+
+java -version
+
+sudo apt install mysql-server -y
+
+sudo systemctl status mysql
+
+sudo mysql
+
+CREATE DATABASE pfm;
+  
+CREATE USER 'pfmuser'@'localhost' IDENTIFIED BY 'pfm@123';
+GRANT ALL PRIVILEGES ON pfm.* TO 'pfmuser'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+
+sudo apt install tomcat10 tomcat10-admin -y
+
+sudo systemctl start tomcat10
+sudo systemctl enable tomcat10
+
+sudo systemctl status tomcat10
+
+http://<server-ip>:8080
+
+sudo cp yourproject.war /var/lib/tomcat10/webapps/
+
+ls /var/lib/tomcat10/webapps/
+
+http://<server-ip>:8080/yourproject
+
+sudo tail -f /var/log/tomcat10/catalina.out
+
+if not
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+FLUSH PRIVILEGES;
+EXIT;
+
+mysql -u root -p
+
+root
+
+exit
+
+sudo systemctl restart tomcat10
+
+sudo tail -f /var/log/tomcat10/catalina.out
+
+
+
+
